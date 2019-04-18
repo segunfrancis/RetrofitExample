@@ -1,6 +1,7 @@
 package com.example.computer.retrofitexample;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 signUpResponsesData = response.body();
                 Toast.makeText(getApplicationContext(), response.body().getMessage(), Toast.LENGTH_LONG).show();
                 progressDialog.dismiss();
+                startActivity(new Intent(MainActivity.this, DetailsActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
             }
 
             @Override
