@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Api {
     private static Retrofit retrofit = null;
 
-    private static ApiInterface getClient() {
+    public static ApiInterface getClient() {
         // change your base URL
         if (retrofit == null) {
             retrofit = new Retrofit.Builder().baseUrl("https://mobileappdatabase.in/")

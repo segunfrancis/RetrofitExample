@@ -11,7 +11,7 @@ public interface ApiInterface {
 
     @FormUrlEncoded // annotation used in POST type requests
     @POST("/retrofit/register.php")
-    // API's endpoints
+        // API's endpoints
     Call<SignUpResponse> registration(@Field("name") String name,
                                       @Field("email") String email,
                                       @Field("password") String password,
